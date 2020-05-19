@@ -1,0 +1,14 @@
+*.pdf
+*.pyc
+*.tar
+*.tgz
+*.bz2
+*.cnf
+*.cfg
+*.log
+*~
+# Executables
+*.exe
+*.out
+*.app
+*.o
