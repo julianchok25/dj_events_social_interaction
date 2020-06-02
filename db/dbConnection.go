@@ -9,13 +9,13 @@ import (
 )
 
 /*MongoCon is the object of connection */
-var MongoCon = DbConnect()
+var MongoCon = ConnectDb()
 
 // Setting URL to connect mongo instance DB
 var clientOptions = options.Client().ApplyURI("mongodb+srv://root:holberton2020@cluster0-keuwr.mongodb.net/test?retryWrites=true&w=majority")
 
-/*DbConnect is the function that allow us to connect to the DB */
-func DbConnect() *mongo.Client {
+/*ConnectDb is the function that allow us to connect to the DB */
+func ConnectDb() *mongo.Client {
 	// Create a connection with clientOptions and setting context with TODO (withouth a condition)
 	client, err := mongo.Connect(context.TODO(), clientOptions)
 	if err != nil {
