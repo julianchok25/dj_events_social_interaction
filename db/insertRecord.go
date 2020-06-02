@@ -24,6 +24,6 @@ func InsertRecord(u models.User) (string, bool, error) {
 		return "", false, err
 	}
 
-	objID, _ := result.InsertedID.(primitive.ObjectID)
-	return objID.String(), true, nil
+	ObjID, _ := result.InsertedID.(primitive.ObjectID)
+	return ObjID.String(), true, nil
 }
