@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SigninSingUp from "./page/SigninSingUp";
 
 export default function App() {
-  const [user, Setuser] = useState({ name: "Camilo Araque" });
+  const [user, Setuser] = useState({ name: "Emmaanuel Gomez" });
 
   return (
     <div>
