@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,18 +7,33 @@ import {
   faUserCheck,
   faCompactDisc,
 } from "@fortawesome/free-solid-svg-icons";
+import BasicModal from "../../components/Modal/BasicModal";
 import LogoVinyl from "../../assets/png/VinylRed.png";
 import LogoWhite from "../../assets/png/VinylWhite.png";
+import SignInForm from "../../components/SignInForm";
 import "./SigninSingUp.scss";
+import SignUpForm from "../../components/SignUpForm";
 
 export default function SigninSingUp() {
+  const [showModal, setShowModal] = useState(false);
+  const [contentModal, setContentModal] = useState(null);
+
+  const openModal = (content) => {
+    setShowModal(true);
+    setContentModal(content);
+  };
   return (
-    <Container className="signin-singup" fluid>
-      <Row>
-        <LeftComponent />
-        <RightComponent />
-      </Row>
-    </Container>
+    <>
+      <Container className="signin-singup" fluid>
+        <Row>
+          <LeftComponent />
+          <RightComponent openModal={openModal} setShowModal={setShowModal} />
+        </Row>
+      </Container>
+      <BasicModal show={showModal} setShow={setShowModal}>
+        {contentModal}
+      </BasicModal>
+    </>
   );
 }
 
@@ -48,15 +63,31 @@ function LeftComponent() {
   );
 }
 
-function RightComponent() {
+function RightComponent(props) {
+  const { openModal, setShowModal } = props;
+
   return (
     <Col className="signin-signup__right" xs={6}>
-      <div>
-        <img src={LogoWhite} alt="LogoWhite" />
-        <h2>See what your favorite djs are uploading right now</h2>
-        <h3>Join To Vinyl today.</h3>
-        <Button variant="danger">Register</Button>
-        <Button variant="outline-primary">Login</Button>
+      <div className="login-box">
+        <div>
+          <img src={LogoWhite} alt="LogoWhite" />
+          <h2>See what your favorite djs are uploading right now</h2>
+          <h3>Join To Vinyl today.</h3>
+          <Button
+            variant="danger"
+            onClick={() =>
+              openModal(<SignUpForm setShowModal={setShowModal} />)
+            }
+          >
+            Register
+          </Button>
+          <Button
+            variant="outline-primary"
+            onClick={() => openModal(<SignInForm />)}
+          >
+            Login
+          </Button>
+        </div>
       </div>
     </Col>
   );
