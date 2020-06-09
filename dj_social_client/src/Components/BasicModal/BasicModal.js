@@ -8,9 +8,9 @@ export default function BasicModal(props) {
   const { show, setShow, children } = props;
   return (
     <Modal
-      classname="basic-modal"
+      className="basic-modal"
       show={show}
-      onhide={() => setShow(false)}
+      onHide={() => setShow(false)}
       centered
       size="lg"
     >

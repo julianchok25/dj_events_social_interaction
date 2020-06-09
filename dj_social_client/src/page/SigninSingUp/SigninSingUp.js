@@ -13,7 +13,7 @@ import Logo2 from "../../assets/png/logo2.png";
 import "./SigninSingUp.scss";
 
 export default function SigninSingUp() {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
   const [contenModal, setContenModal] = useState(null);
   return (
     <>
