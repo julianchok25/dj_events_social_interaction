@@ -8,23 +8,29 @@ import {
   faCompactDisc,
 } from "@fortawesome/free-solid-svg-icons";
 import BasicModal from "../../Components/BasicModal/BasicModal";
+import SignUpForm from "../../Components/SignUpForm";
 import LogoVinyl from "../../assets/png/VinylRed.png";
 import Logo2 from "../../assets/png/logo2.png";
 import "./SigninSingUp.scss";
 
 export default function SigninSingUp() {
-  const [showModal, setShowModal] = useState(true);
-  const [contenModal, setContenModal] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [contentModal, setContenModal] = useState(null);
+
+  const openModal = (content) => {
+    setShowModal(true);
+    setContenModal(content);
+  };
   return (
     <>
       <Container className="signin-singup" fluid>
         <Row>
           <LeftComponent />
-          <RightComponent />
+          <RightComponent openModal={openModal} setShowModal={setShowModal} />
         </Row>
       </Container>
-      <BasicModal show={showModal} set={setShowModal} children={contenModal}>
-        <h1>Modal Content</h1>
+      <BasicModal show={showModal} setShow={setShowModal}>
+        {contentModal}
       </BasicModal>
     </>
   );
@@ -56,7 +62,8 @@ function LeftComponent() {
   );
 }
 
-function RightComponent() {
+function RightComponent(props) {
+  const { setShowModal, openModal } = props;
   return (
     <Col className="signin-signup__right" xs={6}>
       <div class="col-sm-8" className="login-box">
@@ -64,8 +71,20 @@ function RightComponent() {
           <img src={Logo2} alt="LogoWhite" />
           <h2>See what your favorite djs are uploading right now</h2>
           <h3>Join To Vinyl today.</h3>
-          <Button variant="danger">Register</Button>
-          <Button variant="outline-primary">Login</Button>
+          <Button
+            variant="danger"
+            onClick={() =>
+              openModal(<SignUpForm setShowModal={setShowModal} />)
+            }
+          >
+            Register
+          </Button>
+          <Button
+            variant="outline-primary"
+            onClick={() => openModal(<h2>Formulario de login </h2>)}
+          >
+            Login
+          </Button>
         </div>
       </div>
     </Col>
