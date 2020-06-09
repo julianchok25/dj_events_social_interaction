@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal } from "react-bootstrap";
-import Logo2 from "../../assets/png/logo2.png";
+import Logo3 from "../../assets/png/logo3.png";
 
 import "./BasicModal.scss";
 
@@ -16,7 +16,7 @@ export default function BasicModal(props) {
     >
       <Modal.Header>
         <Modal.Title>
-          <img src={Logo2} alt="Djs" />
+          <img src={Logo3} alt="Djs" />
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>{children}</Modal.Body>

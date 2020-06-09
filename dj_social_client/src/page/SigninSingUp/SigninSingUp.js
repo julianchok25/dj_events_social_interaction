@@ -59,12 +59,14 @@ function LeftComponent() {
 function RightComponent() {
   return (
     <Col className="signin-signup__right" xs={6}>
-      <div>
-        <img src={Logo2} alt="LogoWhite" />
-        <h2>See what your favorite djs are uploading right now</h2>
-        <h3>Join To Vinyl today.</h3>
-        <Button variant="danger">Register</Button>
-        <Button variant="outline-primary">Login</Button>
+      <div class="col-sm-8" className="login-box">
+        <div>
+          <img src={Logo2} alt="LogoWhite" />
+          <h2>See what your favorite djs are uploading right now</h2>
+          <h3>Join To Vinyl today.</h3>
+          <Button variant="danger">Register</Button>
+          <Button variant="outline-primary">Login</Button>
+        </div>
       </div>
     </Col>
   );
