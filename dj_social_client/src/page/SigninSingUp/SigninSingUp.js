@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,18 +7,26 @@ import {
   faUserCheck,
   faCompactDisc,
 } from "@fortawesome/free-solid-svg-icons";
+import BasicModal from "../../Components/BasicModal/BasicModal";
 import LogoVinyl from "../../assets/png/VinylRed.png";
 import Logo2 from "../../assets/png/logo2.png";
 import "./SigninSingUp.scss";
 
 export default function SigninSingUp() {
+  const [showModal, setShowModal] = useState(false);
+  const [contenModal, setContenModal] = useState(null);
   return (
-    <Container className="signin-singup" fluid>
-      <Row>
-        <LeftComponent />
-        <RightComponent />
-      </Row>
-    </Container>
+    <>
+      <Container className="signin-singup" fluid>
+        <Row>
+          <LeftComponent />
+          <RightComponent />
+        </Row>
+      </Container>
+      <BasicModal show={showModal} set={setShowModal} children={contenModal}>
+        <h1>Modal Content</h1>
+      </BasicModal>
+    </>
   );
 }
 
@@ -51,14 +59,12 @@ function LeftComponent() {
 function RightComponent() {
   return (
     <Col className="signin-signup__right" xs={6}>
-      <div className="login-box">
-        <div>
-          <img src={Logo2} alt="LogoWhite" />
-          <h2>See what your favorite djs are uploading right now</h2>
-          <h3>Join To Vinyl today.</h3>
-          <Button variant="danger">Register</Button>
-          <Button variant="outline-primary">Login</Button>
-        </div>
+      <div>
+        <img src={Logo2} alt="LogoWhite" />
+        <h2>See what your favorite djs are uploading right now</h2>
+        <h3>Join To Vinyl today.</h3>
+        <Button variant="danger">Register</Button>
+        <Button variant="outline-primary">Login</Button>
       </div>
     </Col>
   );
