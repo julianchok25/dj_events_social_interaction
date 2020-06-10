@@ -34,7 +34,7 @@ export default function SignUpForm(props) {
         signUpApi(formData)
           .then((response) => {
             if (response.code) {
-              toast.error(response.message);
+              toast.warning(response.message);
             } else {
               toast.success(`Welcome to vinyl ${formData.name}!`);
               setShowModal(false);
