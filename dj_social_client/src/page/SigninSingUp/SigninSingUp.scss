@@ -11,9 +11,10 @@
     // justify-content: center;
 
     img {
-      min-height: 100vh;
+      width: 950px;
+      height: 950px;
       position: absolute;
-      right: -470px;
+      right: -475px;
       animation: spin 25s linear infinite;
     }
 
@@ -53,8 +54,6 @@
       box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
       top: 50%;
       left: 50%;
-      position: absolute;
-      transform: translate(-50%, -50%);
       box-sizing: border-box;
       padding: 70px 30px;
     }
@@ -67,7 +66,7 @@
         width: 120px;
         margin-bottom: 100px;
         position: absolute;
-        top: -50px;
+        top: 160px;
         left: calc(48% - 48px);
       }
 
