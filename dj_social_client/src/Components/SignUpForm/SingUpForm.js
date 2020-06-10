@@ -13,34 +13,34 @@ export default function SingUpForm(props) {
 
   return (
     <div className="Sign-up-form">
-      <h2>Crea tu cuenta</h2>
+      <h2>Create your account</h2>
       <form onSubmit={onSubmit}>
         <Form.Group>
           <Row>
             <Col>
-              <Form.Control type="text" placeholder="Nombre" />
+              <Form.Control type="text" placeholder="Name" />
             </Col>
             <Col>
-              <Form.Control type="text" placeholder="Apellidos" />
+              <Form.Control type="text" placeholder="Last Name" />
             </Col>
           </Row>
         </Form.Group>
         <Form.Group>
-          <Form.Control type="email" placeholder="Correo electronico" />
+          <Form.Control type="email" placeholder="E-mail" />
         </Form.Group>
         <Form.Group>
           <Row>
             <Col>
-              <Form.Control type="password" placeholder="Repetir contraseña" />
+              <Form.Control type="password" placeholder="password" />
             </Col>
             <Col>
-              <Form.Control type="text" placeholder="Apellidos" />
+              <Form.Control type="password" placeholder="Repeat password" />
             </Col>
           </Row>
         </Form.Group>
-        <button variant="primary" tipe="submit">
-          Registrarse
-        </button>
+        <Button variant="primary" tipe="submit">
+          Register
+        </Button>
       </form>
     </div>
   );
