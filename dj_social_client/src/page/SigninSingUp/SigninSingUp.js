@@ -66,26 +66,22 @@ function RightComponent(props) {
   const { setShowModal, openModal } = props;
   return (
     <Col className="signin-signup__right" xs={6}>
-      <div class="col-sm-8" className="login-box">
-        <div>
-          <img src={Logo2} alt="LogoWhite" />
-          <h2>See what your favorite djs are uploading right now</h2>
-          <h3>Join To Vinyl today.</h3>
-          <Button
-            variant="danger"
-            onClick={() =>
-              openModal(<SignUpForm setShowModal={setShowModal} />)
-            }
-          >
-            Register
-          </Button>
-          <Button
-            variant="outline-primary"
-            onClick={() => openModal(<h2>Formulario de login </h2>)}
-          >
-            Login
-          </Button>
-        </div>
+      <div>
+        <img src={Logo2} alt="LogoWhite" />
+        <h2>See what your favorite djs are uploading right now</h2>
+        <h3>Join To Vinyl today.</h3>
+        <Button
+          variant="danger"
+          onClick={() => openModal(<SignUpForm setShowModal={setShowModal} />)}
+        >
+          Register
+        </Button>
+        <Button
+          variant="outline-primary"
+          onClick={() => openModal(<h2>Formulario de login </h2>)}
+        >
+          Login
+        </Button>
       </div>
     </Col>
   );
