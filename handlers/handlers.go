@@ -19,6 +19,11 @@ func Handlers() {
 	router.HandleFunc("/view-profiles", middlew.CheckDb(middlew.CheckJwt(routers.ViewProfile))).Methods("GET")
 	router.HandleFunc("/update-profiles", middlew.CheckDb(middlew.CheckJwt(routers.UpdateProfile))).Methods("PUT")
 
+	router.HandleFunc("/upload-avatars", middlew.CheckDb(middlew.CheckJwt(routers.UploadAvatar))).Methods("POST")
+	router.HandleFunc("/avatars", middlew.CheckDb(routers.GetAvatar)).Methods("GET")
+	router.HandleFunc("/upload-banners", middlew.CheckDb(middlew.CheckJwt(routers.UploadBanner))).Methods("POST")
+	router.HandleFunc("/banners", middlew.CheckDb(routers.GetBanner)).Methods("GET")
+
 	Port := os.Getenv("PORT")
 	if Port == "" {
 		Port = "8080"

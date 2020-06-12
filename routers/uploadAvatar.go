@@ -31,10 +31,10 @@ func UploadAvatar(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Modify the record in DB
-	var u models.User
+	var user models.User
 	var status bool
-	u.Avatar = UserID + "." + ext
-	status, err = db.UpdateRecord(u, UserID)
+	user.Avatar = UserID + "." + ext
+	status, err = db.UpdateRecord(user, UserID)
 	if err != nil || status == false {
 		http.Error(w, "Error error writing to database"+err.Error(), http.StatusBadRequest)
 		return
