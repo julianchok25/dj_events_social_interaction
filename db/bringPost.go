@@ -10,8 +10,8 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-/*ReadPosts is a function that returns a list of posts with pagination */
-func ReadPosts(ID string, page int64) ([]*models.ReturnPosts, bool) {
+/*BringPosts is a function that returns a list of posts with pagination */
+func BringPosts(ID string, page int64) ([]*models.ReturnPosts, bool) {
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()
 
