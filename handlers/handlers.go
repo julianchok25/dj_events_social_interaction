@@ -26,6 +26,7 @@ func Handlers() {
 
 	router.HandleFunc("/personal-posts", middlew.CheckDb(middlew.CheckJwt(routers.PersonalPost))).Methods("POST")
 	router.HandleFunc("/read-posts", middlew.CheckDb(middlew.CheckJwt(routers.ReadPosts))).Methods("GET")
+	router.HandleFunc("/delete-posts", middlew.CheckDb(middlew.CheckJwt(routers.DeletePost))).Methods("DELETE")
 
 	router.HandleFunc("/high-relations", middlew.CheckDb(middlew.CheckJwt(routers.HighRelation))).Methods("POST")
 	router.HandleFunc("/down-relations", middlew.CheckDb(middlew.CheckJwt(routers.DownRelation))).Methods("DELETE")
