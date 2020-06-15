@@ -8,7 +8,7 @@ import (
 	"github.com/julianchok25/dj_events_social_interaction/models"
 )
 
-/*QueryRelation is the function that */
+/*QueryRelation is the function that validate the status of the query relation between users*/
 func QueryRelation(w http.ResponseWriter, r *http.Request) {
 	ID := r.URL.Query().Get("id")
 	var mr models.Relation

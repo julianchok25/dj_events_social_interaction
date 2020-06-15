@@ -28,6 +28,7 @@ func Handlers() {
 
 	router.HandleFunc("/high-relations", middlew.CheckDb(middlew.CheckJwt(routers.HighRelation))).Methods("POST")
 	router.HandleFunc("/down-relations", middlew.CheckDb(middlew.CheckJwt(routers.DownRelation))).Methods("DELETE")
+	router.HandleFunc("/query-relations", middlew.CheckDb(middlew.CheckJwt(routers.QueryRelation))).Methods("GET")
 
 	Port := os.Getenv("PORT")
 	if Port == "" {
