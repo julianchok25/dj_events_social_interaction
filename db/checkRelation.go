@@ -18,12 +18,12 @@ func CheckRelation(r models.Relation) (bool, error) {
 	col := db.Collection("relations")
 
 	condition := bson.M{
-		"userID":         r.UserID,
-		"userRelationID": r.UserRelationID,
+		"userId":         r.UserID,
+		"userRelationId": r.UserRelationID,
 	}
 
 	var res models.Relation
-	fmt.Println(res)
+	// fmt.Println(res)
 	err := col.FindOne(ctx, condition).Decode(&res)
 	if err != nil {
 		fmt.Println(err.Error())
