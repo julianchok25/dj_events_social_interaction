@@ -9,7 +9,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-/*UpdateProfile allows to modify the user profile */
+/*UpdateRecord allows to modify the user profile */
 func UpdateRecord(u models.User, ID string) (bool, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*15)
 	defer cancel()
