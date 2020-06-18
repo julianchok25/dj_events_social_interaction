@@ -12,7 +12,7 @@ import ListPosts from "../../components/ListPosts";
 import "./User.scss";
 
 function User(props) {
-  const { match } = props;
+  const { match, setRefreshCheckLogin } = props;
   const { params } = match;
   const [user, setUser] = useState(null);
   const [posts, setPosts] = useState(null);
@@ -59,7 +59,7 @@ function User(props) {
   };
 
   return (
-    <BasicLayout className="user">
+    <BasicLayout className="user" setRefreshCheckLogin={setRefreshCheckLogin}>
       <div className="user__title">
         <h2>{user ? `${user.name} ${user.lastName}` : "User not Exists"}</h2>
       </div>
