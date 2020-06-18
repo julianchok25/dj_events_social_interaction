@@ -1,0 +1,26 @@
+@import "../../scss/index.scss";
+
+.not-results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  font-size: 18px;
+}
+
+.list-follows {
+  padding: 0;
+
+  &__follow {
+    padding: 15px 30px;
+    color: $font-light;
+    border-bottom: 1px solid $border-grey;
+
+    &:hover {
+      color: $font-light;
+      background-color: $background-dark-light;
+      text-decoration: none;
+    }
+  }
+}
