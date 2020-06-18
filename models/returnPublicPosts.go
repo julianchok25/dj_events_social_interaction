@@ -13,8 +13,8 @@ type ReturnPublicPosts struct {
 	UserID         string             `bson:"userId" json:"userId,omitempty"`
 	UserRelationID string             `bson:"userRelationId" json:"userRelationId,omitempty"`
 	Post           struct {
-		Message string    `bson:"message" json:"message,omitempty"`
+		Message string    `bson:"message" json:"message"`
 		Date    time.Time `bson:"date" json:"date,omitempty"`
-		ID      string    `bson:"_id" json:"_id,omitempty"`
+		ID      string    `bson:"_id" json:"_id"`
 	}
 }

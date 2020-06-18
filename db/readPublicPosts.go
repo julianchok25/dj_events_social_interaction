@@ -26,16 +26,22 @@ func ReadPublicPosts(ID string, page int) ([]models.ReturnPublicPosts, bool) {
 			"from":         "user_posts",
 			"localField":   "userRelationId",
 			"foreignField": "userId",
-			"as":           "relPosts",
+			"as":           "relposts",
 		}})
-	conditions = append(conditions, bson.M{"$unwind": "$relPosts"})
-	conditions = append(conditions, bson.M{"$sort": bson.M{"relPosts.date": -1}})
+	conditions = append(conditions, bson.M{"$unwind": "$relposts"})
+	conditions = append(conditions, bson.M{"$sort": bson.M{"relposts.date": -1}})
 	conditions = append(conditions, bson.M{"$skip": skip})
 	conditions = append(conditions, bson.M{"$limit": 20})
 	// cursor with aggregate is builtin, no loop needed
 	cursor, err := col.Aggregate(ctx, conditions)
 	var res []models.ReturnPublicPosts
 	err = cursor.All(ctx, &res)
+	// var message = res[0].Post.Message
+	// if message == "" {
+	// 	fmt.Println("Campo vacío")
+	// } else {
+	// 	fmt.Println(message)
+	// }
 	if err != nil {
 		return res, false
 	}
