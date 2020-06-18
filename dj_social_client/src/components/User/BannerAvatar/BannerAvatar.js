@@ -59,8 +59,6 @@ export default function BannerAvatar(props) {
       ></div>
       {user && (
         <div className="options">
-          <Button variant="danger"> SoundCloud</Button>
-          <Button variant="danger">Calendar</Button>
           {loggedUser._id === user.id && (
             <Button variant="danger" onClick={() => setShowModal(true)}>
               Edit Profile
