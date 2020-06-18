@@ -36,6 +36,8 @@ func Handlers() {
 
 	router.HandleFunc("/public-posts", middlew.CheckDb(middlew.CheckJwt(routers.PublicPosts))).Methods("GET")
 
+	router.HandleFunc("/events", middlew.CheckDb(middlew.CheckJwt(routers.CreateEvent))).Methods("POST")
+
 	Port := os.Getenv("PORT")
 	if Port == "" {
 		Port = "8080"
