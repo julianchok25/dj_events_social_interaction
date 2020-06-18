@@ -37,7 +37,7 @@ export default function SuperiorMenu(props) {
       <Link to={`/${user?._id}`}>
         <FontAwesomeIcon icon={faUserCircle} /> Profile
       </Link>
-      <Link to="/follow">
+      <Link to="/follows">
         <FontAwesomeIcon icon={faHeart} /> Follows
       </Link>
       <Link to="/chats">

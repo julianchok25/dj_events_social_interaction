@@ -27,9 +27,6 @@ function Post(props) {
   const [avatarUrl, setAvatarUrl] = useState(null);
   const [bannerUrl, setBannerUrl] = useState(null);
 
-  console.log(userInfo);
-  console.log(avatarUrl);
-
   useEffect(() => {
     getUserApi(post.userId).then((response) => {
       setUserInfo(response);
