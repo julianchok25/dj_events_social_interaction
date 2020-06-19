@@ -86,7 +86,6 @@ export function updateInfoUserApi(user) {
     },
     body: JSON.stringify(user),
   };
-  console.log(JSON.stringify(user));
 
   return fetch(url, params)
     .then((response) => {

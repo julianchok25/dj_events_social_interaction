@@ -15,14 +15,15 @@ import { logoutApi } from "../../api/auth";
 import useAuth from "../../hooks/useAuth";
 import PostModal from "../Modal/PostModal";
 import EventModal from "../Modal/EventModal";
+import CreateEventForm from "../CreateEventForm";
 
 import "./SuperiorMenu.scss";
 
 export default function SuperiorMenu(props) {
   const { setRefreshCheckLogin } = props;
   const user = useAuth();
-  const [showModal, setShowModal] = useState(false);
-  const [showModal2, setShowModal2] = useState(true);
+  const [showModalPost, setShowModalPost] = useState(false);
+  const [showModalEvent, setShowModalEvent] = useState(false);
 
   const logout = () => {
     logoutApi();
@@ -45,15 +46,22 @@ export default function SuperiorMenu(props) {
       <Link to="" onClick={logout}>
         <FontAwesomeIcon icon={faPowerOff} /> Logout
       </Link>
-      <Button variant="danger" onClick={() => setShowModal(true)}>
+      <Button variant="danger" onClick={() => setShowModalPost(true)}>
         <FontAwesomeIcon icon={faPlus} />
       </Button>
-      <PostModal show={showModal} setShow={setShowModal} />
 
-      <Button variant="danger" onClick={() => setShowModal2(true)}>
+      <PostModal show={showModalPost} setShow={setShowModalPost} />
+      <Button variant="danger" onClick={() => setShowModalEvent(true)}>
         Create Event
       </Button>
-      <EventModal show={showModal2} setShow={setShowModal2} />
+
+      <EventModal
+        show={showModalEvent}
+        setShow={setShowModalEvent}
+        title="Create Your Event"
+      >
+        <CreateEventForm user={user} setShowModal={setShowModalEvent} />
+      </EventModal>
     </div>
   );
 }
