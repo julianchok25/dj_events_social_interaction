@@ -15,8 +15,6 @@ export default function Home(props) {
   useEffect(() => {
     getPostHomeApi(page)
       .then((response) => {
-        console.log(response);
-
         if (!posts && response) {
           setPosts(formatModel(response));
         } else {
