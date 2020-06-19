@@ -49,7 +49,7 @@ export default function CreateEventForm(props) {
   const onSubmit = (e) => {
     e.preventDefault();
 
-    let validCount = 0;
+    let validCount = 1;
 
     values(formData).some((value) => {
       value && validCount++;
