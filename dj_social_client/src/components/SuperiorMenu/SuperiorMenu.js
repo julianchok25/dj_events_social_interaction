@@ -46,8 +46,8 @@ export default function SuperiorMenu(props) {
       <Link to="" onClick={logout}>
         <FontAwesomeIcon icon={faPowerOff} /> Logout
       </Link>
-      <Button variant="danger" onClick={() => setShowModalPost(true)}>
-        <FontAwesomeIcon icon={faPlus} />
+      <Button variant="danger" onClick={() => setShowModal(true)}>
+        Create Post
       </Button>
 
       <PostModal show={showModalPost} setShow={setShowModalPost} />

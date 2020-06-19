@@ -48,7 +48,7 @@ export default function PostModal(props) {
           <Form.Control
             as="textarea"
             rows="6"
-            placeholder="Photo"
+            placeholder="Add a comment or link"
             onChange={(e) => setMessage(e.target.value)}
           />
           <span
@@ -56,7 +56,7 @@ export default function PostModal(props) {
               error: message.length > maxLength,
             })}
           >
-            {message.length}
+            Words: {message.length}
           </span>
           <Button
             disabled={message.length > maxLength || message.length < 1}
