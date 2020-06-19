@@ -79,7 +79,7 @@ export default function CreateEventForm(props) {
             <Col>
               <Form.Control
                 type="text"
-                placeholder="Name your Event"
+                placeholder="Event Name"
                 name="name"
                 defaultValue={formData.name}
                 onChange={onChange}
@@ -101,7 +101,7 @@ export default function CreateEventForm(props) {
             <Col>
               <Form.Control
                 type="text"
-                placeholder="Event Creators "
+                placeholder="Event Creator"
                 name="contactName"
                 defaultValue={formData.contactName}
                 onChange={onChange}
@@ -110,7 +110,7 @@ export default function CreateEventForm(props) {
             <Col>
               <Form.Control
                 type="tel"
-                placeholder="Number Contact"
+                placeholder="Contact Number"
                 name="phone"
                 onChange={onChange}
               />

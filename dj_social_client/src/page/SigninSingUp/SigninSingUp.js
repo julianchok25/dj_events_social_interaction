@@ -75,7 +75,7 @@ function RightComponent(props) {
     <Col className="signin-signup__right" xs={6}>
       <div className="login-box">
         <div>
-          <img src={LogoWhite} alt="LogoWhite" />
+          <img className="logo" src={LogoWhite} alt="LogoWhite" />
           <h2>See what your favorite djs are uploading right now</h2>
           <h3>Join To Vinyl today.</h3>
           <Button
@@ -84,7 +84,7 @@ function RightComponent(props) {
               openModal(<SignUpForm setShowModal={setShowModal} />)
             }
           >
-            Register
+            Sign Up
           </Button>
           <Button
             variant="outline-primary"
@@ -94,7 +94,7 @@ function RightComponent(props) {
               )
             }
           >
-            Login
+            Log In
           </Button>
         </div>
       </div>

@@ -62,12 +62,12 @@
       width: 500px;
       margin: 0 auto;
 
-      img {
+      .logo {
         width: 120px;
-        margin-bottom: 100px;
-        position: absolute;
-        top: 160px;
-        left: calc(48% - 48px);
+        // position: absolute;
+        margin: -140px 0 0 200px;
+        // top: 160px;
+        // left: calc(48% - 48px);
       }
 
       h2 {
