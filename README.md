@@ -12,35 +12,35 @@ When you start as a Dj the most difficult thing is to make yourself known, and i
 
 You need to have node.js, git, golang and yarn installed on your computer. If you don't have them, you can download them from the following websites:
 
-[Node js](https://nodejs.org/en/download/) || [Yarn](https://classic.yarnpkg.com/es-ES/docs/install/#windows-stable) || [Git](https://git-scm.com/downloads) || [Golang](https://golang.org/doc/install)
+[Node js](https://nodejs.org/en/download/)     ||    [Yarn](https://classic.yarnpkg.com/es-ES/docs/install/#windows-stable)    ||    [Git](https://git-scm.com/downloads)    ||   [Golang](https://golang.org/doc/install)
 
 Clone the repository on your machine:
 
-> _ \$ git clone https://github.com/julianchok25/dj_events_social_interaction.git _
+> \$ git clone https://github.com/julianchok25/dj_events_social_interaction.git
 
 Going to the folder:
 
-> _ \$ cd dj_events_social_interaction _
+> \$ cd dj_events_social_interaction
 
 Change the branch to the one defined for the frontend:
 
-> _ \$ git checkout araque_front _
+> \$ git checkout araque_front 
 
 Go to the server folder and run main.go to turn the server on:
 
-> _ \$ cd dj_social_server _ > _ \$ go run main.go _
+> \$ cd dj_social_server _ > _ \$ go run main.go 
 
 Now enter the client's letter:
 
-> \_ \$ cd ../dj_social_client
+> \$ cd ../dj_social_client
 
 Instala las dependencias de Node js:
 
-> _ \$ yarn install _
+> \$ yarn install
 
 And run the startup command to get the application started on your computer at port 3000:
 
-> _ \$ yarn dev _
+> \$ yarn dev
 
 ## Team
 
