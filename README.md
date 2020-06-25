@@ -1,4 +1,4 @@
-![vinil](https://imgur.com/a/UdwvT20)
+![vinil](https://i.imgur.com/3039dRV.png)
 
 # Web App to Manage events and social interaction for DJ’S
 
