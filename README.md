@@ -1,10 +1,10 @@
-![vinil](vynil.png)
+![vinil](https://i.imgur.com/3039dRV.png)
 
 # Web App to Manage events and social interaction for DJ’S
 
 > _"Here, Everyone Listens to you"_
 
-When you start as a Dj the most difficult thing is to make yourself known, and it is always good to manage your image through all social networks, however in a world so marked by trends, it is complicated to make yourself known, and more so with so many different social networks, so we decided to create a single site, where you can promote your events achieving not only that more people see you, but to be able to organize your time and events. You can also make yourself known by placing your muisca and pictures of events.
+When you start as a Dj the most difficult thing is to make yourself known, and it is always good to manage your image through all social networks, however in a world so marked by trends, it is complicated to make yourself known, and more so with so many different social networks, so we decided to create a single site, where you can promote your events achieving not only that more people see you, but to be able to organize your time and events. You can also make yourself known by placing your music and events flayer.
 
 [Vinyl Djs Web](https://vinyldjs.tech/)
 
@@ -12,7 +12,7 @@ When you start as a Dj the most difficult thing is to make yourself known, and i
 
 You need to have node.js, git, golang and yarn installed on your computer. If you don't have them, you can download them from the following websites:
 
-[Node js](https://nodejs.org/en/download/)     ||    [Yarn](https://classic.yarnpkg.com/es-ES/docs/install/#windows-stable)    ||    [Git](https://git-scm.com/downloads)    ||   [Golang](https://golang.org/doc/install)
+[Node js](https://nodejs.org/en/download/) || [Yarn](https://classic.yarnpkg.com/es-ES/docs/install/#windows-stable) || [Git](https://git-scm.com/downloads) || [Golang](https://golang.org/doc/install)
 
 Clone the repository on your machine:
 
@@ -24,17 +24,17 @@ Going to the folder:
 
 Change the branch to the one defined for the frontend:
 
-> \$ git checkout araque_front 
+> \$ git checkout araque_front
 
 Go to the server folder and run main.go to turn the server on:
 
-> \$ cd dj_social_server _ > _ \$ go run main.go 
+> \$ cd dj*social_server * > \_ \$ go run main.go
 
 Now enter the client's letter:
 
 > \$ cd ../dj_social_client
 
-Instala las dependencias de Node js:
+Install node dependencies:
 
 > \$ yarn install
 
@@ -50,6 +50,10 @@ And run the startup command to get the application started on your computer at p
   Passionate about professional design with some tools like Photoshop, Corel Draw and now, learning and improving skills in dynamic visual app frontend with CSS, events handling with Javascript (JS) and other frontend frameworks.
 - **Emmanuel Gómes** - Backend and Frontend Developer.
   Will support data and store handling with NoSql MongoDb. In addition to develop some features on the client side with ReactJS and create some widgets for UI design.
+
+### About
+
+We're passionate about technology, Cohort 10 students in Holberton School, Bogotá Colombia. This idea was born from Camilo Araque, He is a Tech house DJ and guaracha in his free times. He knows many people in this industry who need a platform to create events, make yourself known to the public on a single specialized platform for djs and more features. The site is in developmente and here is video Demo that is deployed in testing environment, we hope you like it.
 
 ## Tech Stack
 
@@ -81,9 +85,32 @@ And run the startup command to get the application started on your computer at p
 - `User rating`
 - `Sound and Light equipment loan`
 
+## Usage
+
+These are the uses currently available on our website:
+
+### Main page
+
+Beautiful design with the Vinyl rotating 360 degrees, Sign Up and Log In Now.
+
+![image1](https://i.imgur.com/BZn65bS.png)
+![image2](https://i.imgur.com/BZn65bS.png)
+
+### Follow DJS
+
+Follow your favorite Djs. All together in one place
+![image3](https://i.imgur.com/MxFPKQy.png)
+
+### Create posts, events and custom your profile
+
+post your interests to your public followers and other managers that is hiring new talents.!! Also, create next event.
+
+![image4](https://i.imgur.com/JGcC2Zm.png)
+![image5](https://i.imgur.com/qfFMqWa.png)
+
 ## Bugs
 
-The events created cannot be displayed yet.
+No known bugs at this time.
 
 ## Authors
 
@@ -94,3 +121,5 @@ The events created cannot be displayed yet.
 ## License
 
 Public Domain. No copy write protection.
+
+![image6](https://i.imgur.com/z0BAINk.png)
