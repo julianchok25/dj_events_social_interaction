@@ -55,6 +55,8 @@ And run the startup command to get the application started on your computer at p
 
 We're passionate about technology, Cohort 10 students in Holberton School, Bogotá Colombia. This idea was born from Camilo Araque, He is a Tech house DJ and guaracha in his free times. He knows many people in this industry who need a platform to create events, make yourself known to the public on a single specialized platform for djs and more features. The site is in developmente and here is video Demo that is deployed in testing environment, we hope you like it.
 
+![image7](https://i.imgur.com/E0FNwI8.png)
+
 ## Tech Stack
 
 - [Golang](https://golang.org/)
@@ -91,9 +93,12 @@ These are the uses currently available on our website:
 
 ### Main page
 
-Beautiful design with the Vinyl rotating 360 degrees, Sign Up and Log In Now.
+Beautiful design with the Vinyl rotating 360 degrees.
 
 ![image1](https://i.imgur.com/BZn65bS.png)
+
+Sign Up and Log In Now.
+
 ![image2](https://i.imgur.com/MtLlO33.png)
 
 ### Follow DJS
@@ -103,9 +108,11 @@ Follow your favorite Djs. All together in one place
 
 ### Create posts, events and custom your profile
 
-post your interests to your public followers and other managers that is hiring new talents.!! Also, create next event.
-
+post your interests to your public followers and other managers that is hiring new talents.
 ![image4](https://i.imgur.com/JGcC2Zm.png)
+
+Also, create next event.
+
 ![image5](https://i.imgur.com/qfFMqWa.png)
 
 ## Bugs
