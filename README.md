@@ -94,7 +94,7 @@ These are the uses currently available on our website:
 Beautiful design with the Vinyl rotating 360 degrees, Sign Up and Log In Now.
 
 ![image1](https://i.imgur.com/BZn65bS.png)
-![image2](https://i.imgur.com/BZn65bS.png)
+![image2](https://i.imgur.com/MtLlO33.png)
 
 ### Follow DJS
 
